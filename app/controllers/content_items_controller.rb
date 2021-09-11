@@ -3,6 +3,9 @@
 class ContentItemsController < SecureController
   def index
     @content_items = current_user.content_items
+    if (params[:search])
+      @content_items = @content_items.where("lower(title) like ?", "%#{params[:search].downcase}%")
+    end
     @publishing_targets = PublishingTarget.where(content_item_id: @content_items.pluck(:id))
   end
 

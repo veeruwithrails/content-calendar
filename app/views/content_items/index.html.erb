@@ -1,4 +1,11 @@
 <h1>Content Items</h1>
+<div class="filter-block">
+  <%= form_tag(content_items_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Content Items", class: 'form-control' %>
+    <%= submit_tag "Search" %>
+  <% end %>
+</div>
+
 <ul id="content-items">
   <%= month_calendar(events: @publishing_targets, attribute: :publish_date,) do |date, meetings| %>
     <%= date %>
@@ -15,6 +22,9 @@
 <%= link_to 'Add Content item', new_content_item_path %>
 
 <style>
+  .filter-block {
+    padding-left: 40px;
+  }
   .event {
     border: 1px solid black;
     margin-top: 2px;
