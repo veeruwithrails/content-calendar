@@ -1,0 +1,14 @@
+<h1><%= @content_item.title %></h1>
+
+<div><%= link_to 'Edit', edit_content_item_path(@content_item) %></div>
+<div><%= link_to 'Delete', content_item_path(@content_item), method: :delete, 'data-confirm': 'Are you sure?' %></div>
+
+<hr>
+
+<%= @content_item.body %>
+
+<hr>
+
+<% unless @content_item.social_networks.blank? %>
+Publish on: <%= @content_item.social_networks.map(&:description).join(',  ') %>
+<% end %>

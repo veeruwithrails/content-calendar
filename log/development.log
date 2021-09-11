@@ -1,0 +1,451 @@
+Started GET "/" for ::1 at 2021-09-11 12:02:50 +0530
+  
+ActiveRecord::ConnectionNotEstablished (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:83:in `rescue in new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.4.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.2) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (347.9ms)[0m  [1m[35mCREATE DATABASE "content_calendar_development" ENCODING = 'unicode'[0m
+  [1m[35m (70.0ms)[0m  [1m[35mCREATE DATABASE "content_calendar_test" ENCODING = 'unicode'[0m
+  [1m[35m (33.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4383805508805156735)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20210903214436)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210903214436"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSocialNetworks (20210903231229)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "social_networks" ("id" bigserial primary key, "description" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_aaf6241109"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_social_networks_on_user_id" ON "social_networks" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210903231229"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateContentItems (20210904010200)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "content_items" ("id" bigserial primary key, "title" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_032a20220e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_content_items_on_user_id" ON "content_items" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210904010200"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20210904011552)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210904011552"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActionTextTables (20210904011553)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "action_text_rich_texts" ("id" bigserial primary key, "name" character varying NOT NULL, "body" text, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_action_text_rich_texts_uniqueness" ON "action_text_rich_texts" ("record_type", "record_id", "name")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210904011553"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePublishingTargets (20210904231010)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "publishing_targets" ("id" bigserial primary key, "content_item_id" bigint NOT NULL, "social_network_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_43794a065e"
+FOREIGN KEY ("content_item_id")
+  REFERENCES "content_items" ("id")
+, CONSTRAINT "fk_rails_e1e8066463"
+FOREIGN KEY ("social_network_id")
+  REFERENCES "social_networks" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_publishing_targets_on_content_item_id" ON "publishing_targets" ("content_item_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_publishing_targets_on_social_network_id" ON "publishing_targets" ("social_network_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210904231010"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-11 06:41:49.247509"], ["updated_at", "2021-09-11 06:41:49.247509"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4383805508805156735)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-09-11 12:12:12 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContentItemsController#index as HTML
+Completed 401 Unauthorized in 23ms (ActiveRecord: 0.0ms | Allocations: 2416)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-09-11 12:12:12 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 611)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 17.8ms | Allocations: 3506)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 12515)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 9.2ms | Allocations: 19856)
+
+
+  
+ActionView::Template::Error (couldn't find file 'trix/dist/trix' with type 'text/css'
+Checked in these paths: 
+  /Users/developer/veeru/personal/murty/test/rails-content-calendar/app/assets/config
+  /Users/developer/veeru/personal/murty/test/rails-content-calendar/app/assets/images
+  /Users/developer/veeru/personal/murty/test/rails-content-calendar/app/assets/stylesheets
+  /Users/developer/.rvm/gems/ruby-2.7.3/gems/actioncable-6.1.4.1/app/assets/javascripts
+  /Users/developer/.rvm/gems/ruby-2.7.3/gems/activestorage-6.1.4.1/app/assets/javascripts
+  /Users/developer/.rvm/gems/ruby-2.7.3/gems/actionview-6.1.4.1/lib/assets/compiled
+  /Users/developer/.rvm/gems/ruby-2.7.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/developer/veeru/personal/murty/test/rails-content-calendar/node_modules):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/actiontext.scss:6
+app/views/layouts/application.html.erb:9
+Started GET "/users/sign_in" for ::1 at 2021-09-11 12:13:46 +0530
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 612)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 4935)
+[Webpacker] Compiling...
+Started GET "/users/sign_in" for ::1 at 2021-09-11 12:13:48 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1016)
+[Webpacker] Compiling...
+Started GET "/users/sign_in" for ::1 at 2021-09-11 12:13:51 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1009)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/developer/veeru/personal/murty/test/rails-content-calendar/public/packs
+[Webpacker] Hash: bb9565a43414e660a343
+Version: webpack 4.46.0
+Time: 3704ms
+Built at: 09/11/2021 12:13:53 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2ce139892b3d358da6d2.js    534 KiB  application  [emitted] [immutable]  application
+js/application-2ce139892b3d358da6d2.js.map    594 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2ce139892b3d358da6d2.js js/application-2ce139892b3d358da6d2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 586 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/stylesheets/application.scss 52.2 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 11 hidden modules
+
+[Webpacker] Compiled all packs in /Users/developer/veeru/personal/murty/test/rails-content-calendar/public/packs
+[Webpacker] Hash: bb9565a43414e660a343
+Version: webpack 4.46.0
+Time: 4166ms
+Built at: 09/11/2021 12:13:53 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2ce139892b3d358da6d2.js    534 KiB  application  [emitted] [immutable]  application
+js/application-2ce139892b3d358da6d2.js.map    594 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2ce139892b3d358da6d2.js js/application-2ce139892b3d358da6d2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 586 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/stylesheets/application.scss 52.2 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 11 hidden modules
+
+  Rendered application/_main_navigation.html.erb (Duration: 2.9ms | Allocations: 1035)
+  Rendered layout layouts/application.html.erb (Duration: 5080.9ms | Allocations: 15052)
+Completed 200 OK in 5084ms (Views: 5081.9ms | ActiveRecord: 0.0ms | Allocations: 15665)
+
+
+  Rendered application/_main_navigation.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 6338.8ms | Allocations: 43035)
+Completed 200 OK in 6367ms (Views: 6346.2ms | ActiveRecord: 5.1ms | Allocations: 50842)
+
+
+[Webpacker] Compiled all packs in /Users/developer/veeru/personal/murty/test/rails-content-calendar/public/packs
+[Webpacker] Hash: bb9565a43414e660a343
+Version: webpack 4.46.0
+Time: 1694ms
+Built at: 09/11/2021 12:13:55 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2ce139892b3d358da6d2.js    534 KiB  application  [emitted] [immutable]  application
+js/application-2ce139892b3d358da6d2.js.map    594 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2ce139892b3d358da6d2.js js/application-2ce139892b3d358da6d2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 586 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/stylesheets/application.scss 52.2 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 11 hidden modules
+
+  Rendered application/_main_navigation.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 3373.8ms | Allocations: 11917)
+Completed 200 OK in 3377ms (Views: 3374.6ms | ActiveRecord: 0.0ms | Allocations: 12513)
+
+
+Started GET "/" for ::1 at 2021-09-11 12:14:06 +0530
+Processing by ContentItemsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-09-11 12:14:06 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 152)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 5233)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 5830)
+
+
+Started GET "/social_networks" for ::1 at 2021-09-11 12:14:38 +0530
+Processing by SocialNetworksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 231)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-09-11 12:14:38 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 152)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 5937)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.0ms | Allocations: 6540)
+
+
+Started GET "/social_networks" for ::1 at 2021-09-11 12:14:40 +0530
+Processing by SocialNetworksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 225)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-09-11 12:14:40 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5217)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 5807)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-09-11 12:14:42 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 222)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 141)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1871)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 7030)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 8289)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-09-11 12:14:54 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.3ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5243)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 5827)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-09-11 12:14:59 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 45)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 105)
+  Rendered /Users/developer/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5269)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 5788)
+
+
+Started POST "/users" for ::1 at 2021-09-11 12:15:14 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"veeruwithrails@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "veeruwithrails@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "veeruwithrails@gmail.com"], ["encrypted_password", "$2a$12$U8K43cCviHR7W9syeGx01e8TLsQYWbx8x/vpDvJ4PuKIzy5XoaMLG"], ["created_at", "2021-09-11 06:45:14.584252"], ["updated_at", "2021-09-11 06:45:14.584252"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/social_networks
+Completed 302 Found in 247ms (ActiveRecord: 7.4ms | Allocations: 11110)
+
+
+Started GET "/social_networks" for ::1 at 2021-09-11 12:15:14 +0530
+Processing by SocialNetworksController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering social_networks/index.html.erb within layouts/application
+  Rendered social_networks/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4973)
+Completed 200 OK in 19ms (Views: 11.1ms | ActiveRecord: 2.8ms | Allocations: 7851)
+
+
+Started GET "/social_networks/new" for ::1 at 2021-09-11 12:15:20 +0530
+Processing by SocialNetworksController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering social_networks/new.html.erb within layouts/application
+  Rendered social_networks/_form.html.erb (Duration: 3.7ms | Allocations: 832)
+  Rendered social_networks/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5346)
+Completed 200 OK in 53ms (Views: 17.0ms | ActiveRecord: 9.0ms | Allocations: 12169)
+
+
+Started GET "/content_items" for ::1 at 2021-09-11 12:15:23 +0530
+Processing by ContentItemsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering content_items/index.html.erb within layouts/application
+  [1m[36mContentItem Load (2.5ms)[0m  [1m[34mSELECT "content_items".* FROM "content_items" WHERE "content_items"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/content_items/index.html.erb:6
+  Rendered collection of content_items/_content_item.html.erb [0 times] (Duration: 0.1ms | Allocations: 20)
+  Rendered content_items/index.html.erb within layouts/application (Duration: 40.8ms | Allocations: 3464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 7918)
+Completed 200 OK in 94ms (Views: 42.4ms | ActiveRecord: 11.0ms | Allocations: 16035)
+
+
+Started GET "/content_items/new" for ::1 at 2021-09-11 12:15:25 +0530
+Processing by ContentItemsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering content_items/new.html.erb within layouts/application
+  [1m[36mSocialNetwork Load (3.0ms)[0m  [1m[34mSELECT "social_networks".* FROM "social_networks" WHERE "social_networks"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/content_items/_form.html.erb:15
+  Rendered content_items/_form.html.erb (Duration: 54.2ms | Allocations: 10078)
+  Rendered content_items/new.html.erb within layouts/application (Duration: 55.8ms | Allocations: 10424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.2ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 65.8ms | Allocations: 14515)
+Completed 200 OK in 88ms (Views: 57.6ms | ActiveRecord: 12.9ms | Allocations: 19789)
+
+
+Started GET "/" for ::1 at 2021-09-11 12:15:53 +0530
+Processing by ContentItemsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering content_items/index.html.erb within layouts/application
+  [1m[36mContentItem Load (0.9ms)[0m  [1m[34mSELECT "content_items".* FROM "content_items" WHERE "content_items"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/content_items/index.html.erb:6
+  Rendered collection of content_items/_content_item.html.erb [0 times] (Duration: 0.1ms | Allocations: 16)
+  Rendered content_items/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1018)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 5191)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 2.0ms | Allocations: 6904)
+
+
+Started GET "/content_items" for ::1 at 2021-09-11 12:19:51 +0530
+Processing by ContentItemsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering content_items/index.html.erb within layouts/application
+  [1m[36mContentItem Load (1.1ms)[0m  [1m[34mSELECT "content_items".* FROM "content_items" WHERE "content_items"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/content_items/index.html.erb:6
+  Rendered collection of content_items/_content_item.html.erb [0 times] (Duration: 0.1ms | Allocations: 16)
+  Rendered content_items/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered application/_main_navigation.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 5899)
+Completed 200 OK in 28ms (Views: 18.5ms | ActiveRecord: 2.9ms | Allocations: 7613)
+
+

@@ -1,0 +1,28 @@
+<%= form_with model: content_item do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body %>
+    <%= form.rich_text_area :body %>
+  </div>
+
+  <hr>
+
+  <ul>
+    <% content_item.user.social_networks.each do |network| %>
+      <li>
+        <%= label_tag do %>
+          <%= check_box_tag 'content_item[social_network_ids][]', network.id, content_item.social_network_ids.include?(network.id) %>
+          <%= network.description %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
