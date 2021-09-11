@@ -13,13 +13,13 @@ Upon completion, briefly outline the next few steps you would plan to take to co
 
 Did you run into any issues with the existing system, or notice any bugs.
 
-* I had to run the following commands to run the app successfully
-  $ yarn install --check-files
-  $ rails action_text:install
+* I had to run the following command to run the app successfully
+  * $ rails action_text:install
 
 
 ## Thoughts and Comments
 
-  * We can upgrade this feature more like
-    -- When clicking on a particular date we can allow user to add content items to that particular date
-    -- By clicking on event we can show the complete details in a popup or tooltip
+  * We can upgrade this feature to some more extent
+    * When clicking on a particular date we can allow user to add content items to that particular date
+    * By clicking on event we can show the complete details in a popup or tooltip
+    * etc..
