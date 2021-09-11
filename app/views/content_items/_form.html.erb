@@ -13,11 +13,13 @@
 
   <ul>
     <% content_item.user.social_networks.each do |network| %>
-      <li>
+      <li class="social-item">
         <%= label_tag do %>
-          <%= check_box_tag 'content_item[social_network_ids][]', network.id, content_item.social_network_ids.include?(network.id) %>
+          <%= check_box_tag 'content_item[publishing_targets_attributes][][social_network_id]', network.id, content_item.social_network_ids.include?(network.id) %>
           <%= network.description %>
         <% end %>
+        <b class="publish-date"> Publish Date: </b>
+          <%= date_field_tag "content_item[publishing_targets_attributes][][publish_date]", Date.today%>
       </li>
     <% end %>
   </ul>
@@ -26,3 +28,13 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<style>
+  .social-item {
+    padding: 5px 0;
+  }
+  .publish-date {
+    padding-left: 20px;
+    padding-right: 5px;
+  }
+</style>

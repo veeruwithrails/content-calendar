@@ -50,6 +50,9 @@ class ContentItemsController < SecureController
   private
 
   def content_item_params
-    params.require(:content_item).permit(:title, :body, social_network_ids: [])
+    # params.require(:content_item).permit(:title, :body, social_network_ids: [])
+    params.require(:content_item).permit(:title, :body, 
+      :publishing_targets_attributes =>[:content_item_id, :social_network_id, :publish_date]
+    )
   end
 end
